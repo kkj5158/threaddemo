@@ -1,0 +1,21 @@
+
+name : threaddemo
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: threaddemo-mysql-thread-dev
+    ports:
+      - "33306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: thread_demo
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 7475
+      TZ: Asia/Seoul
+    volumes:
+      - mysql_data_dev:/var/lib/mysql
+      - ../db/init:/docker-entrypoint-initdb.d
+    restart: always
+
+volumes:
+  mysql_data_dev:
