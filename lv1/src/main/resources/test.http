@@ -1,0 +1,3 @@
+### 🧪 Lv1 - 쓰레드 테스트 (start() 실행)
+GET http://localhost:8081/test/threads
+Accept: application/json
